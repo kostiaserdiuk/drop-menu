@@ -2,7 +2,7 @@ div{
     width: 100%;
     background-color: rgb(226, 109, 0);
     height: 70px;
-    display: flex;
+    display: inline-block;
     font-weight: bolder;
 }
 
@@ -30,21 +30,28 @@ div ul li{
     margin: 0 20px;
 }
 
-#first-drop ul{
+
+#first-drop ul,#second-drop ul{
     display: flex;
     flex-direction: column;
     color: white;
     padding: 0;
     visibility: hidden;
+    background-color: rgb(226, 109, 0);
+    padding-top: 0.9rem;
+    display: none;
 }
 
-#first-drop ul li{
-    background-color: rgb(226, 109, 0);
+#first-drop ul li,#second-drop ul li{
     width: 100%;
     margin: 0;
 }
 
-#first-drop{
+#first-drop ul li a,#second-drop ul li a{
+    display: block;
+}
+
+#first-drop,#second-drop{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,11 +59,62 @@ div ul li{
     font-size: 35px;
 }
 
-ul #first-drop:hover{
+#third-drop{
+    width: 231px;
+    height: 40px;
+}
+
+#third-drop ul{
+    width: 231px;
+    height: 120px;
+    visibility: hidden;
+    display: none;
+    position: relative;
+    left:230px;
+    bottom: 45px;
+    padding: 0;
+}
+
+#fourth-drop ul{
+    width: 250px;
+}
+
+#fourth-drop:hover>ul,#fourth-drop ul:hover{
+    visibility: visible;
+    display: block;
+}
+
+ul #second-drop:hover>a{
     background-color:grey;
+    color:black; 
+}
+
+#second-drop ul li a:hover{
+    background-color:grey;
+    color: black;
+}
+
+ul #second-drop:hover>ul, ul #second-drop ul:hover{
+    visibility: visible; 
+    display: block;
+}
+
+ul #first-drop:hover>a{
+    background-color:grey;
+    color:black; 
+}
+
+#first-drop ul li a:hover{
+    background-color:grey;
+    color: black;
 }
 
 ul #first-drop:hover>ul, ul #first-drop ul:hover{
     visibility: visible;
-    
+    display: block; 
 }
+#third-drop:hover>ul, #third-drop ul:hover{
+    visibility: visible;
+    display: block;
+}
+
